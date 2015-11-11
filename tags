@@ -1,0 +1,144 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALLOC_SIZE	testers/tester-3.c	6;"	d	file:
+BLOCK_SIZE	alloc.c	16;"	d	file:
+CC	Makefile	/^CC = gcc$/;"	m
+CHANCE_OF_FREE	testers/tester-5.c	6;"	d	file:
+CHANCE_OF_FREE	testers/tester-9.c	6;"	d	file:
+CHANCE_OF_REALLOC	testers/tester-5.c	7;"	d	file:
+CHANCE_OF_REALLOC	testers/tester-9.c	7;"	d	file:
+DEBUG	alloc.c	6;"	d	file:
+G	testers/tester-4.c	6;"	d	file:
+INC	Makefile	/^INC = -I.$/;"	m
+K	testers/tester-2.c	5;"	d	file:
+K	testers/tester-4.c	4;"	d	file:
+M	testers/tester-2.c	4;"	d	file:
+M	testers/tester-4.c	5;"	d	file:
+MAX_ALLOC_SIZE	testers/tester-5.c	5;"	d	file:
+MAX_ALLOC_SIZE	testers/tester-6.c	6;"	d	file:
+MAX_ALLOC_SIZE	testers/tester-7.c	6;"	d	file:
+MAX_ALLOC_SIZE	testers/tester-8.c	6;"	d	file:
+MAX_ALLOC_SIZE	testers/tester-9.c	5;"	d	file:
+MIN_ALLOC_SIZE	testers/tester-5.c	4;"	d	file:
+MIN_ALLOC_SIZE	testers/tester-6.c	5;"	d	file:
+MIN_ALLOC_SIZE	testers/tester-7.c	5;"	d	file:
+MIN_ALLOC_SIZE	testers/tester-8.c	5;"	d	file:
+MIN_ALLOC_SIZE	testers/tester-9.c	4;"	d	file:
+NUM_CYCLES	testers/tester-1.c	5;"	d	file:
+NUM_CYCLES	testers/tester-1.c	7;"	d	file:
+PAGE_SIZE	alloc.c	17;"	d	file:
+START_MALLOC_SIZE	testers/tester-4.c	12;"	d	file:
+START_MALLOC_SIZE	testers/tester-4.c	9;"	d	file:
+STOP_MALLOC_SIZE	testers/tester-4.c	10;"	d	file:
+STOP_MALLOC_SIZE	testers/tester-4.c	13;"	d	file:
+TESTERS	Makefile	/^TESTERS = $(patsubst %.c, %, $(wildcard testers\/*))$/;"	m
+TOTAL_ALLOCS	testers/tester-2.c	10;"	d	file:
+TOTAL_ALLOCS	testers/tester-2.c	8;"	d	file:
+TOTAL_ALLOCS	testers/tester-3.c	5;"	d	file:
+TOTAL_ALLOCS	testers/tester-5.c	8;"	d	file:
+TOTAL_ALLOCS	testers/tester-9.c	8;"	d	file:
+_CONTEST_H_	contest.h	2;"	d
+_GNU_SOURCE	contest-alloc.c	1;"	d	file:
+__MAIN_H	syspro_hw0/main.h	2;"	d
+_alloc_stats_t	contest.h	/^typedef struct _alloc_stats_t$/;"	s
+align8	alloc.c	/^size_t align8(size_t s) {$/;"	f
+alloc_calloc	contest-alloc.c	/^static void *(*alloc_calloc)(size_t nmemb, size_t size) = NULL;$/;"	v	file:
+alloc_free	contest-alloc.c	/^static void  (*alloc_free)(void *ptr) = NULL;$/;"	v	file:
+alloc_handle	contest-alloc.c	/^static void *alloc_handle = NULL;$/;"	v	file:
+alloc_malloc	contest-alloc.c	/^static void *(*alloc_malloc)(size_t size) = NULL;$/;"	v	file:
+alloc_realloc	contest-alloc.c	/^static void *(*alloc_realloc)(void *ptr, size_t size) = NULL;$/;"	v	file:
+alloc_stats_t	contest.h	/^} alloc_stats_t;$/;"	t	typeref:struct:_alloc_stats_t
+calloc	alloc.c	/^void *calloc(size_t num, size_t size)$/;"	f
+calloc	contest-alloc.c	/^void *calloc(size_t nmemb, size_t size)$/;"	f
+child_still_running	mcontest.c	/^int child_still_running = 1;$/;"	v
+clear_bits	syspro_hw0/part4.c	/^long int clear_bits(long int value, long int flag)$/;"	f
+contest_alloc_init	contest-alloc.c	/^static void contest_alloc_init()$/;"	f	file:
+contest_tracking	contest-alloc.c	/^static void contest_tracking()$/;"	f	file:
+copy_block	alloc.c	/^void copy_block(t_block src, t_block dst) {$/;"	f
+data	alloc.c	/^    char data[1];$/;"	m	struct:s_block	file:
+delete_block	alloc.c	/^void delete_block(t_block b) {$/;"	f
+eight	syspro_hw0/part2.c	/^void eight()$/;"	f
+eighteen	syspro_hw0/part4.c	/^void eighteen(const int k)$/;"	f
+eleven	syspro_hw0/part3.c	/^void eleven()$/;"	f
+extend_heap	alloc.c	/^t_block extend_heap(size_t s) {$/;"	f
+fifteen	syspro_hw0/part3.c	/^void fifteen(const int value)$/;"	f
+find_block	alloc.c	/^t_block find_block(size_t size) {$/;"	f
+first_block	alloc.c	/^void* first_block = NULL;$/;"	v
+five	syspro_hw0/part1.c	/^void five(const int x, const int y)$/;"	f
+four	syspro_hw0/part1.c	/^void four(const float value)$/;"	f
+fourteen	syspro_hw0/part3.c	/^void fourteen(const char *s)$/;"	f
+free	alloc.c	/^void free(void *ptr)$/;"	f
+free	contest-alloc.c	/^void free(void *ptr)$/;"	f
+get_block	alloc.c	/^t_block get_block(void *p) {$/;"	f
+insert_block	alloc.c	/^void insert_block(t_block b) {$/;"	f
+inside_init	contest-alloc.c	/^static int inside_init = 0;$/;"	v	file:
+libc_calloc	contest-alloc.c	/^static void *(*libc_calloc)(size_t nmemb, size_t size) = NULL;$/;"	v	file:
+libc_free	contest-alloc.c	/^static void (*libc_free)(void *ptr) = NULL;$/;"	v	file:
+libc_malloc	contest-alloc.c	/^static void *(*libc_malloc)(size_t size) = NULL;$/;"	v	file:
+libc_realloc	contest-alloc.c	/^static void *(*libc_realloc)(void *ptr, size_t size) = NULL;$/;"	v	file:
+main	mcontest.c	/^int main(int argc, char **argv)$/;"	f
+main	mreplace.c	/^int main(int argc, char **argv)$/;"	f
+main	syspro_hw0/main.c	/^int main()$/;"	f
+main	testers/tester-1.c	/^int main()$/;"	f
+main	testers/tester-2.c	/^int main()$/;"	f
+main	testers/tester-3.c	/^int main()$/;"	f
+main	testers/tester-4.c	/^int main()$/;"	f
+main	testers/tester-5.c	/^int main()$/;"	f
+main	testers/tester-6.c	/^int main()$/;"	f
+main	testers/tester-7.c	/^int main()$/;"	f
+main	testers/tester-8.c	/^int main()$/;"	f
+main	testers/tester-9.c	/^int main()$/;"	f
+malloc	alloc.c	/^void *malloc(size_t size)$/;"	f
+malloc	contest-alloc.c	/^void *malloc(size_t size)$/;"	f
+malloc_and_break	testers/tester-6.c	/^void *malloc_and_break(void *region, int c, size_t len)$/;"	f
+malloc_and_break	testers/tester-7.c	/^void *malloc_and_break(void *region, int c, size_t len)$/;"	f
+malloc_and_break	testers/tester-8.c	/^void *malloc_and_break(void *region, int c, size_t len)$/;"	f
+max_heap_used	contest.h	/^	unsigned long long max_heap_used;$/;"	m	struct:_alloc_stats_t
+max_ptr	alloc.c	/^void* max_ptr = NULL;  \/\/ is the heap top location$/;"	v
+memory_heap_sum	contest.h	/^	unsigned long long memory_heap_sum;$/;"	m	struct:_alloc_stats_t
+memory_uses	contest.h	/^	unsigned long memory_uses;$/;"	m	struct:_alloc_stats_t
+merge	alloc.c	/^t_block merge(t_block b) {$/;"	f
+more_bytes	alloc.c	/^void* more_bytes(size_t s) {$/;"	f
+next	alloc.c	/^    t_block next;$/;"	m	struct:s_block	file:
+nine	syspro_hw0/part2.c	/^void nine()$/;"	f
+now_ptr	alloc.c	/^void* now_ptr = NULL;  \/\/ which next is the start of new alloc$/;"	v
+one	syspro_hw0/part1.c	/^void one(const int a, const int b)$/;"	f
+overlap	testers/tester-6.c	/^int overlap(void *r1, void *r2, size_t len)$/;"	f
+overlap	testers/tester-7.c	/^int overlap(void *r1, void *r2, size_t len)$/;"	f
+overlap	testers/tester-8.c	/^int overlap(void *r1, void *r2, size_t len)$/;"	f
+prev	alloc.c	/^    t_block prev;$/;"	m	struct:s_block	file:
+print_all_block	alloc.c	/^void print_all_block() {$/;"	f
+print_now_ptr	alloc.c	/^void print_now_ptr() {$/;"	f
+realloc	alloc.c	/^void *realloc(void *ptr, size_t size)$/;"	f
+realloc	contest-alloc.c	/^void *realloc(void *ptr, size_t size)$/;"	f
+reduce	testers/tester-4.c	/^void *reduce(void *ptr, int size)$/;"	f
+s_block	alloc.c	/^struct s_block {$/;"	s	file:
+sbrk_init_done	contest-alloc.c	/^static void *sbrk_init_done = 0;$/;"	v	file:
+sbrk_largest	contest-alloc.c	/^static void *sbrk_largest = 0;$/;"	v	file:
+sbrk_start	contest-alloc.c	/^static void *sbrk_start = 0;$/;"	v	file:
+seven	syspro_hw0/part2.c	/^void seven(int a, const int b)$/;"	f
+seventeen	syspro_hw0/part4.c	/^void seventeen(const int d)$/;"	f
+six	syspro_hw0/part2.c	/^float * six(const int *x)$/;"	f
+sixteen	syspro_hw0/part4.c	/^char * sixteen()$/;"	f
+size	alloc.c	/^    size_t size;$/;"	m	struct:s_block	file:
+split_block	alloc.c	/^void split_block(t_block b, size_t s) {$/;"	f
+stats	contest-alloc.c	/^static alloc_stats_t *stats = NULL;$/;"	v	file:
+t_block	alloc.c	/^typedef struct s_block *t_block;$/;"	t	typeref:struct:s_block	file:
+ten	syspro_hw0/part2.c	/^void ten(int *x)$/;"	f
+thirteen	syspro_hw0/part3.c	/^void thirteen()$/;"	f
+three	syspro_hw0/part1.c	/^void three()$/;"	f
+timeout_timer	mcontest.c	/^void *timeout_timer(void *ptr)$/;"	f
+twelve	syspro_hw0/part3.c	/^void twelve()$/;"	f
+two	syspro_hw0/part1.c	/^void two(const int grade)$/;"	f
+verify	testers/tester-6.c	/^void verify(void *region, int c, size_t len)$/;"	f
+verify	testers/tester-7.c	/^void verify(void *region, int c, size_t len)$/;"	f
+verify	testers/tester-8.c	/^void verify(void *region, int c, size_t len)$/;"	f
+verify_overlap2	testers/tester-6.c	/^void verify_overlap2(void *r1, void *r2, size_t len)$/;"	f
+verify_overlap2	testers/tester-8.c	/^void verify_overlap2(void *r1, void *r2, size_t len)$/;"	f
+verify_overlap3	testers/tester-6.c	/^void verify_overlap3(void *r1, void *r2, void *r3, size_t len)$/;"	f
+verify_overlap3	testers/tester-7.c	/^void verify_overlap3(void *r1, void *r2, void *r3, size_t len)$/;"	f
+verify_overlap3	testers/tester-8.c	/^void verify_overlap3(void *r1, void *r2, void *r3, size_t len)$/;"	f
