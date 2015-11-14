@@ -5,7 +5,7 @@
 #include <string.h>
 #include <pthread.h>
 
-#define MAXN 1000000
+#define MAXN 130000000
 
 typedef struct {
     int *dat;
@@ -25,7 +25,7 @@ int cmp(const void* a, const void* b) {
 
 void *myqsort(void* _args) {
     sort_struct *args = (sort_struct*)_args;
-    printf("Sorted %zu elements.\n", args->cnt);
+    fprintf(stderr, "Sorted %zu elements.\n", args->cnt);
     qsort(args->dat, args->cnt, sizeof(int), cmp);
     return 0;
 }
@@ -48,11 +48,8 @@ void *merge(void* _args) {
         }
     }
     memcpy(args->d1, temp, sizeof(int) * (args->l1 + args->l2));
-    for (int i = 0; i < args->l1 + args->l2; ++i) {
-    //    printf("~~%d\n", args->d1[i]);
-    }
     free(temp);
-    printf("Merged %d and %d elements with %d duplicates.\n", args->l1, args->l2, duplicate_cnt);
+    fprintf(stderr, "Merged %d and %d elements with %d duplicates.\n", args->l1, args->l2, duplicate_cnt);
     return 0;
 }
 
@@ -63,6 +60,7 @@ void msort(int *dat, int input_ct, int segment_count) {
     } else {
         values_per_segment = (input_ct / segment_count) + 1;
     }
+    //fprintf(stderr, "input_ct=%d, segment_count=%d, vps=%d\n", input_ct, segment_count, values_per_segment);
     pthread_t p[segment_count];
     for (int i = 0; i < segment_count; ++i) {
         sort_struct *args = (sort_struct*)malloc(sizeof(sort_struct));

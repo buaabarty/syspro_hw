@@ -3,7 +3,7 @@
 
 CC = gcc
 INC = -I.
-FLAGS = -W -Wall -g
+FLAGS = -O4 -W -Wall -g
 LINKOPTS = -lpthread
 
 all: msort gen doc/html
