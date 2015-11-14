@@ -54,7 +54,7 @@ void *merge(void* _args) {
 }
 
 void msort(int *dat, int input_ct, int segment_count) {
-    int values_per_segment;
+    int values_per_segment, i, j;
     if (input_ct % segment_count == 0) {
         values_per_segment = input_ct / segment_count;
     } else {
@@ -62,7 +62,7 @@ void msort(int *dat, int input_ct, int segment_count) {
     }
     //fprintf(stderr, "input_ct=%d, segment_count=%d, vps=%d\n", input_ct, segment_count, values_per_segment);
     pthread_t p[segment_count];
-    for (int i = 0; i < segment_count; ++i) {
+    for (i = 0; i < segment_count; ++i) {
         sort_struct *args = (sort_struct*)malloc(sizeof(sort_struct));
         args->dat = dat + i * values_per_segment;
         if (i != segment_count - 1 || input_ct % segment_count == 0) {
@@ -74,14 +74,14 @@ void msort(int *dat, int input_ct, int segment_count) {
             free(args);
         }
     }
-    for (int i = 0; i < segment_count; ++i) {
+    for (i = 0; i < segment_count; ++i) {
         pthread_join(p[i], NULL);
     }
-    for (int i = values_per_segment; i < input_ct; i <<= 1) {
+    for (i = values_per_segment; i < input_ct; i <<= 1) {
         int cnt = input_ct / (i * 2) + (input_ct % (i * 2) > 0);
         //printf("i=%d cnt=%d\n", i, cnt);
         pthread_t *p = (pthread_t*)malloc(sizeof(pthread_t) * cnt);
-        for (int j = 0; j < cnt; ++j) {
+        for (j = 0; j < cnt; ++j) {
             if (j == cnt - 1 && input_ct % (i * 2) <= i) {
                 continue;
             }
@@ -98,7 +98,7 @@ void msort(int *dat, int input_ct, int segment_count) {
                 free(args);
             }
         }
-        for (int j = 0; j < cnt; ++j) {
+        for (j = 0; j < cnt; ++j) {
             if (j == cnt - 1 && input_ct % (i * 2) <= i) {
                 continue;
             }
@@ -110,7 +110,8 @@ void msort(int *dat, int input_ct, int segment_count) {
 }
 
 void output(int *dat, int input_ct) {
-    for (int i = 0; i < input_ct; ++i) {
+    int i;
+    for (i = 0; i < input_ct; ++i) {
         printf("%d\n", dat[i]);
     }
 }
