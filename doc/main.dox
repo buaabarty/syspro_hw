@@ -1,8 +1,8 @@
 /**
 
-  @mainpage System Programming: HW3: Shell
-  @htmlinclude doc/shell.html
+  @mainpage CS 241: Multi-threaded Merge Sort
+  @htmlinclude doc/mergesort.html
 
-  @page forkbomb Fork Bomb
-  @htmlinclude forkbomb.html
+  @page CS 241 Grading, Submission, and Other Details
+  @htmlinclude cs241.html
 */

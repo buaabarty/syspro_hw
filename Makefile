@@ -1,16 +1,21 @@
-CC = gcc
-OPTS = -g -Wall -W
+# CS 241 Fall 2013
+# The University of Illinois
 
-all: shell doc/html
+CC = gcc
+INC = -I.
+FLAGS = -W -Wall -g
+LINKOPTS = -lpthread
+
+all: msort gen doc/html
 
 doc/html:
 	doxygen doc/Doxyfile
 
-shell: shell.c log.o
-	$(CC) -o $@ $^ $(OPTS)
+msort: msort.c
+	$(CC) $(INC) $(FLAGS) $(LINKOPTS) msort.c -o msort
 
-log.o: log.c log.h
-	$(CC) -o $@ $< -c $(OPTS)
+gen: gen.c
+	$(CC) $(INC) $(FLAGS) gen.c -o gen
 
 clean:
-	rm -rf *.o shell testlog doc/html
+	rm -rf msort gen doc/html
