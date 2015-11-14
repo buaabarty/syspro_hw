@@ -62,17 +62,15 @@ void msort(int *dat, int input_ct, int segment_count) {
     }
     //fprintf(stderr, "input_ct=%d, segment_count=%d, vps=%d\n", input_ct, segment_count, values_per_segment);
     pthread_t p[segment_count];
+    sort_struct args[segment_count];
     for (i = 0; i < segment_count; ++i) {
-        sort_struct *args = (sort_struct*)malloc(sizeof(sort_struct));
-        args->dat = dat + i * values_per_segment;
+        args[i].dat = dat + i * values_per_segment;
         if (i != segment_count - 1 || input_ct % segment_count == 0) {
-            args->cnt = values_per_segment;
+            args[i].cnt = values_per_segment;
         } else {
-            args->cnt = input_ct % values_per_segment;
+            args[i].cnt = input_ct % values_per_segment;
         }
-        if (pthread_create(&p[i], NULL, (void*)myqsort, args)) {
-            free(args);
-        }
+        pthread_create(&p[i], NULL, (void*)myqsort, &args[i]);
     }
     for (i = 0; i < segment_count; ++i) {
         pthread_join(p[i], NULL);
@@ -80,23 +78,21 @@ void msort(int *dat, int input_ct, int segment_count) {
     for (i = values_per_segment; i < input_ct; i <<= 1) {
         int cnt = input_ct / (i * 2) + (input_ct % (i * 2) > 0);
         //printf("i=%d cnt=%d\n", i, cnt);
-        pthread_t *p = (pthread_t*)malloc(sizeof(pthread_t) * cnt);
+        pthread_t p[cnt];
+        merge_struct args[cnt];
         for (j = 0; j < cnt; ++j) {
             if (j == cnt - 1 && input_ct % (i * 2) <= i) {
                 continue;
             }
-            merge_struct *args = (merge_struct*)malloc(sizeof(merge_struct));
-            args->d1 = dat + j * 2 * i;
-            args->d2 = dat + (j * 2 + 1) * i;
-            args->l1 = i;
+            args[j].d1 = dat + j * 2 * i;
+            args[j].d2 = dat + (j * 2 + 1) * i;
+            args[j].l1 = i;
             if (j != cnt - 1 || input_ct % i == 0) {
-                args->l2 = i;
+                args[j].l2 = i;
             } else {
-                args->l2 = input_ct % i;
+                args[j].l2 = input_ct % i;
             }
-            if (pthread_create(&p[j], NULL, (void*)merge, args)) {
-                free(args);
-            }
+            pthread_create(&p[j], NULL, (void*)merge, &args[j]);
         }
         for (j = 0; j < cnt; ++j) {
             if (j == cnt - 1 && input_ct % (i * 2) <= i) {
@@ -105,7 +101,6 @@ void msort(int *dat, int input_ct, int segment_count) {
             //printf("j=%d\n", j);
             pthread_join(p[j], NULL);
         }
-        free(p);
     }
 }
 
