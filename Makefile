@@ -9,7 +9,7 @@ LINKOPTS = -lpthread
 all: msort gen doc/html
 
 doc/html:
-	doxygen doc/Doxyfile
+	doxygen -u doc/Doxyfile
 
 msort: msort.c
 	$(CC) $(INC) $(FLAGS) $(LINKOPTS) msort.c -o msort
