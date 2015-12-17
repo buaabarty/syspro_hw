@@ -1,21 +1,23 @@
-# CS 241 Fall 2013
-# The University of Illinois
+all: parmake doc/html
 
-CC = gcc
-INC = -I.
-FLAGS = -O4 -W -Wall -g
-LINKOPTS = -lpthread
+doc/html: parmake.c
+	doxygen doc/Doxyfile 2> /dev/null
+	cp doc/flow.png doc/html/
 
-all: msort gen doc/html
+parmake: parmake.o queue.o parser.o rule.o
+	gcc -pthread -Wall parmake.o queue.o parser.o rule.o -o parmake
 
-doc/html:
-	doxygen -u doc/Doxyfile
+parmake.o: parmake.c
+	gcc -g -Wall -c parmake.c -o parmake.o
 
-msort: msort.c
-	$(CC) $(INC) $(FLAGS) $(LINKOPTS) msort.c -o msort
+queue.o: queue.c queue.h
+	gcc -g -Wall -c queue.c -o queue.o
 
-gen: gen.c
-	$(CC) $(INC) $(FLAGS) gen.c -o gen
+parser.o: parser.c parser.h
+	gcc -g -Wall -c parser.c -o parser.o
+
+rule.o: rule.c rule.h
+	gcc -g -Wall -c rule.c -o rule.o
 
 clean:
-	rm -rf msort gen doc/html
+	rm -rf *.o parmake doc/html

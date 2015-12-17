@@ -6,23 +6,25 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 ALLOC_SIZE	syspro_hw1/testers/tester-3.c	/^#define ALLOC_SIZE /;"	d	file:
 BLOCK_SIZE	syspro_hw1/alloc.c	/^#define BLOCK_SIZE /;"	d	file:
-CC	Makefile	/^CC = gcc$/;"	m
 CC	syspro_hw1/Makefile	/^CC = gcc$/;"	m
 CC	syspro_hw2/Makefile	/^CC = gcc$/;"	m
+CC	syspro_hw3/Makefile	/^CC = gcc$/;"	m
 CHANCE_OF_FREE	syspro_hw1/testers/tester-5.c	/^#define CHANCE_OF_FREE /;"	d	file:
 CHANCE_OF_FREE	syspro_hw1/testers/tester-9.c	/^#define CHANCE_OF_FREE /;"	d	file:
 CHANCE_OF_REALLOC	syspro_hw1/testers/tester-5.c	/^#define CHANCE_OF_REALLOC /;"	d	file:
 CHANCE_OF_REALLOC	syspro_hw1/testers/tester-9.c	/^#define CHANCE_OF_REALLOC /;"	d	file:
-FLAGS	Makefile	/^FLAGS = -W -Wall -g$/;"	m
+FLAGS	syspro_hw3/Makefile	/^FLAGS = -O4 -W -Wall -g$/;"	m
+False	parser.c	/^typedef enum { False=0, True=1} boolean;$/;"	e	enum:__anon1	file:
 G	syspro_hw1/testers/tester-4.c	/^#define G /;"	d	file:
-INC	Makefile	/^INC = -I.$/;"	m
 INC	syspro_hw1/Makefile	/^INC = -I.$/;"	m
+INC	syspro_hw3/Makefile	/^INC = -I.$/;"	m
 K	syspro_hw1/testers/tester-2.c	/^#define K /;"	d	file:
 K	syspro_hw1/testers/tester-4.c	/^#define K /;"	d	file:
-LINKOPTS	Makefile	/^LINKOPTS = -lpthread$/;"	m
+LINKOPTS	syspro_hw3/Makefile	/^LINKOPTS = -lpthread$/;"	m
 Log	syspro_hw2/shell.c	/^log_t Log;$/;"	v
 M	syspro_hw1/testers/tester-2.c	/^#define M /;"	d	file:
 M	syspro_hw1/testers/tester-4.c	/^#define M /;"	d	file:
+MAXN	syspro_hw3/msort.c	/^#define MAXN /;"	d	file:
 MAX_ALLOC_SIZE	syspro_hw1/testers/tester-5.c	/^#define MAX_ALLOC_SIZE /;"	d	file:
 MAX_ALLOC_SIZE	syspro_hw1/testers/tester-6.c	/^#define MAX_ALLOC_SIZE /;"	d	file:
 MAX_ALLOC_SIZE	syspro_hw1/testers/tester-7.c	/^#define MAX_ALLOC_SIZE /;"	d	file:
@@ -73,10 +75,15 @@ TOTAL_ALLOCS	syspro_hw1/testers/tester-2.c	/^  #define TOTAL_ALLOCS /;"	d	file:
 TOTAL_ALLOCS	syspro_hw1/testers/tester-3.c	/^#define TOTAL_ALLOCS /;"	d	file:
 TOTAL_ALLOCS	syspro_hw1/testers/tester-5.c	/^#define TOTAL_ALLOCS /;"	d	file:
 TOTAL_ALLOCS	syspro_hw1/testers/tester-9.c	/^#define TOTAL_ALLOCS /;"	d	file:
+True	parser.c	/^typedef enum { False=0, True=1} boolean;$/;"	e	enum:__anon1	file:
 _CONTEST_H_	syspro_hw1/contest.h	/^#define _CONTEST_H_$/;"	d
+_GNU_SOURCE	parser.c	/^#define _GNU_SOURCE$/;"	d	file:
 _GNU_SOURCE	syspro_hw1/contest-alloc.c	/^#define _GNU_SOURCE$/;"	d	file:
 __LOG_H_	syspro_hw2/log.h	/^#define __LOG_H_$/;"	d
 __MAIN_H	syspro_hw0/main.h	/^#define __MAIN_H$/;"	d
+__PARSER_H	parser.h	/^#define __PARSER_H$/;"	d
+__QUEUE_H__	queue.h	/^#define __QUEUE_H__$/;"	d
+__RULE_H__	rule.h	/^#define __RULE_H__$/;"	d
 _alloc_stats_t	syspro_hw1/contest.h	/^typedef struct _alloc_stats_t$/;"	s
 _details	syspro_hw2/doc/html/log_8c.html	/^<hr\/><a name="_details"><\/a><h2>Detailed Description<\/h2>$/;"	a
 _details	syspro_hw2/doc/html/log_8h.html	/^<hr\/><a name="_details"><\/a><h2>Detailed Description<\/h2>$/;"	a
@@ -90,23 +97,34 @@ alloc_handle	syspro_hw1/contest-alloc.c	/^static void *alloc_handle = NULL;$/;"	
 alloc_malloc	syspro_hw1/contest-alloc.c	/^static void *(*alloc_malloc)(size_t size) = NULL;$/;"	v	file:
 alloc_realloc	syspro_hw1/contest-alloc.c	/^static void *(*alloc_realloc)(void *ptr, size_t size) = NULL;$/;"	v	file:
 alloc_stats_t	syspro_hw1/contest.h	/^} alloc_stats_t;$/;"	t	typeref:struct:_alloc_stats_t
+boolean	parser.c	/^typedef enum { False=0, True=1} boolean;$/;"	t	typeref:enum:__anon1	file:
 calloc	syspro_hw1/alloc.c	/^void *calloc(size_t num, size_t size)$/;"	f
 calloc	syspro_hw1/contest-alloc.c	/^void *calloc(size_t nmemb, size_t size)$/;"	f
 child_still_running	syspro_hw1/mcontest.c	/^int child_still_running = 1;$/;"	v
 clear_bits	syspro_hw0/part4.c	/^long int clear_bits(long int value, long int flag)$/;"	f
 cmd	syspro_hw2/log.h	/^    char* cmd;$/;"	m	struct:_node
+cmp	syspro_hw3/msort.c	/^int cmp(const void* a, const void* b) {$/;"	f
+cnt	syspro_hw3/msort.c	/^    size_t cnt;$/;"	m	struct:__anon4	file:
+commands	rule.h	/^	queue_t *commands; \/\/\/<List of commands$/;"	m	struct:__anon3
 contest_alloc_init	syspro_hw1/contest-alloc.c	/^static void contest_alloc_init()$/;"	f	file:
 contest_tracking	syspro_hw1/contest-alloc.c	/^static void contest_tracking()$/;"	f	file:
 convertToId	syspro_hw2/doc/html/search/search.js	/^function convertToId(search)$/;"	f
 copy_block	syspro_hw1/alloc.c	/^void copy_block(t_block src, t_block dst) {$/;"	f
+d1	syspro_hw3/msort.c	/^    int *d1;$/;"	m	struct:__anon5	file:
+d2	syspro_hw3/msort.c	/^    int *d2;$/;"	m	struct:__anon5	file:
+dat	syspro_hw3/msort.c	/^    int *dat;$/;"	m	struct:__anon4	file:
+dat	syspro_hw3/msort.c	/^int dat[MAXN];$/;"	v
 data	syspro_hw1/alloc.c	/^    char data[1];$/;"	m	struct:s_block	file:
 delete_block	syspro_hw1/alloc.c	/^void delete_block(t_block b) {$/;"	f
+deps	rule.h	/^	queue_t *deps; \/\/\/<List of dependencies$/;"	m	struct:__anon3
 eight	syspro_hw0/part2.c	/^void eight()$/;"	f
 eighteen	syspro_hw0/part4.c	/^void eighteen(const int k)$/;"	f
 eleven	syspro_hw0/part3.c	/^void eleven()$/;"	f
 execute	syspro_hw2/shell.c	/^int execute(char* buffer) {$/;"	f
 extend_heap	syspro_hw1/alloc.c	/^t_block extend_heap(size_t s) {$/;"	f
 fifteen	syspro_hw0/part3.c	/^void fifteen(const int value)$/;"	f
+filterOnTargets	parser.c	/^static void filterOnTargets(queue_t **rules, char **targets){$/;"	f	file:
+findMatch	parser.c	/^static boolean findMatch(rule_t *curRule, queue_t *validRules){$/;"	f	file:
 find_block	syspro_hw1/alloc.c	/^t_block find_block(size_t size) {$/;"	f
 first_block	syspro_hw1/alloc.c	/^void* first_block = NULL;$/;"	v
 five	syspro_hw0/part1.c	/^void five(const int x, const int y)$/;"	f
@@ -114,9 +132,11 @@ four	syspro_hw0/part1.c	/^void four(const float value)$/;"	f
 fourteen	syspro_hw0/part3.c	/^void fourteen(const char *s)$/;"	f
 free	syspro_hw1/alloc.c	/^void free(void *ptr)$/;"	f
 free	syspro_hw1/contest-alloc.c	/^void free(void *ptr)$/;"	f
+free_adapter	parser.c	/^static void free_adapter(void *arg, void *trash){$/;"	f	file:
 getXPos	syspro_hw2/doc/html/search/search.js	/^function getXPos(item)$/;"	f
 getYPos	syspro_hw2/doc/html/search/search.js	/^function getYPos(item)$/;"	f
 get_block	syspro_hw1/alloc.c	/^t_block get_block(void *p) {$/;"	f
+head	queue.h	/^	struct queue_node *head; \/\/\/<Head of linked-list$/;"	m	struct:__anon2	typeref:struct:__anon2::queue_node
 head	syspro_hw2/log.h	/^    node* head;$/;"	m	struct:_log_t
 indexSectionNames.0	syspro_hw2/doc/html/search/search.js	/^  0: "all",$/;"	p
 indexSectionNames.1	syspro_hw2/doc/html/search/search.js	/^  1: "classes",$/;"	p
@@ -128,6 +148,7 @@ indexSectionsWithContent.2	syspro_hw2/doc/html/search/search.js	/^  2: "00000000
 indexSectionsWithContent.3	syspro_hw2/doc/html/search/search.js	/^  3: "000000000000000000000000000000000000000000000000000000000000000000000000000011000000000000000000"$/;"	p
 insert_block	syspro_hw1/alloc.c	/^void insert_block(t_block b) {$/;"	f
 inside_init	syspro_hw1/contest-alloc.c	/^static int inside_init = 0;$/;"	v	file:
+item	queue.c	/^	void *item; \/\/\/<Stored value$/;"	m	struct:queue_node	file:
 l00001	syspro_hw2/doc/html/log_8h_source.html	/^<h1>log.h<\/h1><a href="log_8h.html">Go to the documentation of this file.<\/a><div class="fragment"><pre class="fragment"><a name="l00001"><\/a>00001 $/;"	a
 l00003	syspro_hw2/doc/html/log_8h_source.html	/^<a name="l00003"><\/a>00003 <span class="preprocessor">#ifndef __LOG_H_<\/span>$/;"	a
 l00004	syspro_hw2/doc/html/log_8h_source.html	/^<a name="l00004"><\/a>00004 <span class="preprocessor"><\/span><span class="preprocessor">#define __LOG_H_<\/span>$/;"	a
@@ -147,6 +168,8 @@ l00017	syspro_hw2/doc/html/log_8h_source.html	/^<a name="l00017"><\/a>00017 <spa
 l00018	syspro_hw2/doc/html/log_8h_source.html	/^<a name="l00018"><\/a>00018 <span class="keywordtype">char<\/span> *<a class="code" href="log_8c.html#a0f0e39bb39b9b2e2be5f5867ee13dceb" title="Preforms a newest-to-oldest search of log entries for an entry matching a given prefix...">log_search<\/a>(<a class="code" href="structlog__t.html">log_t<\/a>* l, <span class="keyword">const<\/span> <span class="keywordtype">char<\/span> *prefix);$/;"	a
 l00019	syspro_hw2/doc/html/log_8h_source.html	/^<a name="l00019"><\/a>00019 $/;"	a
 l00020	syspro_hw2/doc/html/log_8h_source.html	/^<a name="l00020"><\/a>00020 <span class="preprocessor">#endif<\/span>$/;"	a
+l1	syspro_hw3/msort.c	/^    int l1;$/;"	m	struct:__anon5	file:
+l2	syspro_hw3/msort.c	/^    int l2;$/;"	m	struct:__anon5	file:
 letter_L	syspro_hw2/doc/html/classes.html	/^<tr><td><a name="letter_L"><\/a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&nbsp;&nbsp;L&nbsp;&nbsp;<\/div><\/td><\/tr><\/table>$/;"	a
 letter_N	syspro_hw2/doc/html/classes.html	/^<\/td><td><a class="el" href="structlog__t.html">log_t<\/a>&nbsp;&nbsp;&nbsp;<\/td><td><a name="letter_N"><\/a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&nbsp;&nbsp;N&nbsp;&nbsp;<\/div><\/td><\/tr><\/table>$/;"	a
 libc_calloc	syspro_hw1/contest-alloc.c	/^static void *(*libc_calloc)(size_t nmemb, size_t size) = NULL;$/;"	v	file:
@@ -160,8 +183,7 @@ log_push	syspro_hw2/log.c	/^void log_push(log_t* l, const char *item) {$/;"	f
 log_search	syspro_hw2/log.c	/^char *log_search(log_t* l, const char *prefix) {$/;"	f
 log_t	syspro_hw2/log.h	/^} log_t;$/;"	t	typeref:struct:_log_t
 low_ptr	syspro_hw1/alloc.c	/^void* low_ptr = NULL;  \/\/ is the begin of heap$/;"	v
-main	gen.c	/^int main(int argc, char*argv[])$/;"	f
-main	msort.c	/^int main(int argc, char **argv)$/;"	f
+main	parmake.c	/^int main(int argc, char **argv)$/;"	f
 main	syspro_hw0/main.c	/^int main()$/;"	f
 main	syspro_hw1/mcontest.c	/^int main(int argc, char **argv)$/;"	f
 main	syspro_hw1/mreplace.c	/^int main(int argc, char **argv)$/;"	f
@@ -175,6 +197,8 @@ main	syspro_hw1/testers/tester-7.c	/^int main()$/;"	f
 main	syspro_hw1/testers/tester-8.c	/^int main()$/;"	f
 main	syspro_hw1/testers/tester-9.c	/^int main()$/;"	f
 main	syspro_hw2/shell.c	/^int main() {$/;"	f
+main	syspro_hw3/gen.c	/^int main(int argc, char*argv[])$/;"	f
+main	syspro_hw3/msort.c	/^int main(int argc, char **argv) {$/;"	f
 malloc	syspro_hw1/alloc.c	/^void *malloc(size_t size)$/;"	f
 malloc	syspro_hw1/contest-alloc.c	/^void *malloc(size_t size)$/;"	f
 malloc_and_break	syspro_hw1/testers/tester-6.c	/^void *malloc_and_break(void *region, int c, size_t len)$/;"	f
@@ -185,22 +209,45 @@ max_ptr	syspro_hw1/alloc.c	/^void* max_ptr = NULL;  \/\/ is the heap top locatio
 memory_heap_sum	syspro_hw1/contest.h	/^	unsigned long long memory_heap_sum;$/;"	m	struct:_alloc_stats_t
 memory_uses	syspro_hw1/contest.h	/^	unsigned long memory_uses;$/;"	m	struct:_alloc_stats_t
 merge	syspro_hw1/alloc.c	/^t_block merge(t_block b) {$/;"	f
+merge	syspro_hw3/msort.c	/^void *merge(void* _args) {$/;"	f
+merge_struct	syspro_hw3/msort.c	/^} merge_struct;$/;"	t	typeref:struct:__anon5	file:
 more_bytes	syspro_hw1/alloc.c	/^void* more_bytes(size_t s) {$/;"	f
+msort	syspro_hw3/msort.c	/^void msort(int *dat, int input_ct, int segment_count) {$/;"	f
+myqsort	syspro_hw3/msort.c	/^void *myqsort(void* _args) {$/;"	f
+next	queue.c	/^	struct queue_node *next; \/\/\/<Link to next node$/;"	m	struct:queue_node	typeref:struct:queue_node::queue_node	file:
 next	syspro_hw1/alloc.c	/^    t_block next;$/;"	m	struct:s_block	file:
 next	syspro_hw2/log.h	/^    struct _node* next;$/;"	m	struct:_node	typeref:struct:_node::_node
 nine	syspro_hw0/part2.c	/^void nine()$/;"	f
 node	syspro_hw2/log.h	/^} node;$/;"	t	typeref:struct:_node
+notifyRules	parser.c	/^static void notifyRules$/;"	f	file:
 now_ptr	syspro_hw1/alloc.c	/^void* now_ptr = NULL;  \/\/ which next is the start of new alloc$/;"	v
 one	syspro_hw0/part1.c	/^void one(const int a, const int b)$/;"	f
+output	syspro_hw3/msort.c	/^void output(int *dat, int input_ct) {$/;"	f
 overlap	syspro_hw1/testers/tester-6.c	/^int overlap(void *r1, void *r2, size_t len)$/;"	f
 overlap	syspro_hw1/testers/tester-7.c	/^int overlap(void *r1, void *r2, size_t len)$/;"	f
 overlap	syspro_hw1/testers/tester-8.c	/^int overlap(void *r1, void *r2, size_t len)$/;"	f
+parse_line	parser.c	/^static char **parse_line(char *line)$/;"	f	file:
+parser_parse_makefile	parser.c	/^void parser_parse_makefile$/;"	f
 prefix	syspro_hw2/shell.c	/^void prefix() {$/;"	f
 prev	syspro_hw1/alloc.c	/^    t_block prev;$/;"	m	struct:s_block	file:
-print_usage	gen.c	/^void print_usage(char *program_name)$/;"	f
+print_usage	syspro_hw3/gen.c	/^void print_usage(char *program_name)$/;"	f
+queue_at	queue.c	/^void *queue_at(queue_t *q, int pos){$/;"	f
+queue_dequeue	queue.c	/^void *queue_dequeue(queue_t *q) {$/;"	f
+queue_destroy	queue.c	/^void queue_destroy(queue_t *q) {$/;"	f
+queue_enqueue	queue.c	/^void queue_enqueue(queue_t *q, void *item) {$/;"	f
+queue_init	queue.c	/^void queue_init(queue_t *q) {$/;"	f
+queue_iterate	queue.c	/^void queue_iterate(queue_t *q, void (*iter_func)(void *, void *), void *arg) {$/;"	f
+queue_node	queue.c	/^struct queue_node {$/;"	s	file:
+queue_remove_at	queue.c	/^void *queue_remove_at(queue_t *q, int pos){$/;"	f
+queue_size	queue.c	/^unsigned int queue_size(queue_t *q) {$/;"	f
+queue_t	queue.h	/^} queue_t;$/;"	t	typeref:struct:__anon2
 realloc	syspro_hw1/alloc.c	/^void *realloc(void *ptr, size_t size)$/;"	f
 realloc	syspro_hw1/contest-alloc.c	/^void *realloc(void *ptr, size_t size)$/;"	f
 reduce	syspro_hw1/testers/tester-4.c	/^void *reduce(void *ptr, int size)$/;"	f
+rule_destroy	rule.c	/^void rule_destroy(rule_t *rule){$/;"	f
+rule_free_adapter	parser.c	/^static void rule_free_adapter(void *arg, void *trash){$/;"	f	file:
+rule_init	rule.c	/^void rule_init(rule_t *rule){$/;"	f
+rule_t	rule.h	/^} rule_t;$/;"	t	typeref:struct:__anon3
 s_block	syspro_hw1/alloc.c	/^struct s_block {$/;"	s	file:
 sbrk_init_done	syspro_hw1/contest-alloc.c	/^static void *sbrk_init_done = 0;$/;"	v	file:
 sbrk_largest	syspro_hw1/contest-alloc.c	/^static void *sbrk_largest = 0;$/;"	v	file:
@@ -209,11 +256,15 @@ seven	syspro_hw0/part2.c	/^void seven(int a, const int b)$/;"	f
 seventeen	syspro_hw0/part4.c	/^void seventeen(const int d)$/;"	f
 six	syspro_hw0/part2.c	/^float * six(const int *x)$/;"	f
 sixteen	syspro_hw0/part4.c	/^char * sixteen()$/;"	f
+size	queue.h	/^	unsigned int size; \/\/\/<Number of nodes in linked-list$/;"	m	struct:__anon2
 size	syspro_hw1/alloc.c	/^    size_t size;$/;"	m	struct:s_block	file:
+sort_struct	syspro_hw3/msort.c	/^} sort_struct;$/;"	t	typeref:struct:__anon4	file:
 split	syspro_hw2/shell.c	/^int split(char *args[], char* str, const char* spl) {$/;"	f
 split_block	syspro_hw1/alloc.c	/^void split_block(t_block b, size_t s) {$/;"	f
 stats	syspro_hw1/contest-alloc.c	/^static alloc_stats_t *stats = NULL;$/;"	v	file:
 t_block	syspro_hw1/alloc.c	/^typedef struct s_block *t_block;$/;"	t	typeref:struct:s_block	file:
+tail	queue.h	/^	struct queue_node *tail; \/\/\/<Tail of linked-list$/;"	m	struct:__anon2	typeref:struct:__anon2::queue_node
+target	rule.h	/^	char *target; \/\/\/<Name of target$/;"	m	struct:__anon3
 ten	syspro_hw0/part2.c	/^void ten(int *x)$/;"	f
 thirteen	syspro_hw0/part3.c	/^void thirteen()$/;"	f
 three	syspro_hw0/part1.c	/^void three()$/;"	f
